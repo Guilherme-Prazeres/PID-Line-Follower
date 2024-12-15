@@ -4,9 +4,9 @@ import numpy as np
 # Constantes
 TIME_STEP = 32
 VELOCIDADE_BASE = 3.0  # Velocidade base do robô
-Kp = 0.1  # Ganho proporcional
-Ki = 0.0  # Ganho integral
-Kd = 0.0  # Ganho derivativo
+Kp = 0.4  # Ganho proporcional
+Ki = 0.2  # Ganho integral
+Kd = 0.1  # Ganho derivativo
 
 # Inicializa o robô
 robot = Robot()
@@ -104,5 +104,6 @@ while robot.step(TIME_STEP) != -1:
     right_back_motor.setVelocity(right_speed)
 
     # Imprime informações úteis para debug
-    print(f"Erro: {error}, PID: {pid_output}, Left Speed: {left_speed}, Right Speed: {right_speed}")
+    print(f"Erro: {error}, PID: {pid_output}")
+    ##, Left Speed: {left_speed}, Right Speed: {right_speed}")
     ##print(f"Cor do pixel central: R={red}, G={green}, B={blue}")
